@@ -18,9 +18,10 @@ public class Products {
 	private String name;
 	private String icon;
 	private String marketPrice;
+	
+        @ManyToOne
+        @JoinColumn(name = "category_id")
+        private Categories category;
 
-@ManyToOne
-@JoinColumn(name = "category_id")
-private Categories category;
 }
 
